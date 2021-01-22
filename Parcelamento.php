@@ -155,8 +155,8 @@
                         COM JUROS 
                     */
 
-                    //Taxa de juros deve ser igual a (parcela corrente MENOS número minimas parcelas sem juros)
-                    $rate                            = $this->_fees[( $i-$installment_no_interest ) -1];
+                    //Taxa de juros deve ser igual a (parcela corrente - 1 )
+                    $rate                            = $this->_fees[$i-1];
  
                     //Valor a ser pago
                     $payment_value = ( $checkout_value + ( $checkout_value * $rate)  / 100 ) ;//parcela  
